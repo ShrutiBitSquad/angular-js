@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>$location service</title>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+	</script>
+</head>
+
+<body ng-app="locationService"
+	style="text-align:center">
+	<h1 style="color: green">GeeksforGeeks</h1>
+	<h3>AngularJS $location Service</h3>
+	<h4>Click on the button to see the current URL</h4>
+	<div ng-controller="locationServiceController">
+		<button ng-click="seeURL()">See URL</button>
+		
+<p>Current URL is :: {{currentURL}}</p>
+
+	</div>
+
+	<script>
+		var app = angular.module('locationService', []);
+		app.controller('locationServiceController',
+			['$scope', '$location', function ($scope, $location) {
+				$scope.seeURL = function () {
+					$scope.currentURL = $location.absUrl();
+				}
+			}]);
+	</script>
+</body>
+</html>

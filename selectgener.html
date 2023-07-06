@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+	</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app = "MyApp">
+    <div ng-controller="genders">
+        <input type = "radio" ng-model = "gender" value = "Female" ng-change="layout(gender)">Female
+        <input type = "radio" ng-model = "gender" value = "Male" ng-change="layout(gender)">Male
+        You selected: {{result}}
+    </div>
+    <script>
+            var app = angular.module("MyApp",[]);
+            app.controller('genders',['$scope',function($scope){
+                $scope.layout = function(gender){
+                    $scope.result = gender;
+                }
+            }])
+
+
+    </script>
+</body>
+</html>

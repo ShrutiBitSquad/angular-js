@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="vitk8dhrmugk8mki9lilb9-cbo09pocromaumcikoik0lo,o6-0fk9ilok0rm9kilfk9=f0weolkitkjoojcioj8yhtuhi6ehyj88ukn8jtikujujfvomiljibajbj4re9kieeiki -->
+</head>
+
+<body>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+    <div ng-app="MyApp">
+        <div ng-controller="fcontrller">
+            <div ng-controller="scontroller">
+                {{ lname }}
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = angular.module('MyApp', []);
+        app.controller('fcontroller', function($scope) {
+            $scope.pname = "shruti";
+        });
+        app.controller('scontroller', function($scope) {
+            $scope.lname = "dadhich";
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+    <html>
+    <head>
+        <meta chrset="UTF 8">
+        <title>Event Registration</title>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+    </head>
+    <body >
+    <h1> Guru99 Global Event</h1>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+
+    <div ng-app="DemoApp">
+        <div ng-controller="firstcontroller">
+            <div ng-controller="secondcontroller">
+            {{lname}}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module('DemoApp',[]);
+        app.controller('firstcontroller', function($scope){
+            $scope.pname="firstcontroller";
+                });
+            app.controller('secondcontroller', function($scope){
+                $scope.lname="secondcontroller";
+                });
+    </script>
+    </body>
+    </html> -->

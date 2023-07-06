@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book Catalog</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="BookController">
+    <h2>Books</h2>
+    <table>
+        <tr ng-repeat="book in books">
+          <td>{{$index}}</td>
+          <td>{{book.title}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.date}}</td>
+          <td><input type="button" ng-click="editBook(book)" value="edit"></td>
+          <td><button ng-click="deleteBook(book)">Delete</button></td>
+        </tr>
+      </table>
+      <div ng-show="edit.index !== undefined">
+        <input type="text" ng-model="edit.title" placeholder="Title">
+        <input type="text" ng-model="edit.author" placeholder="Author">
+        <button ng-click="updateBook()">Update</button>
+      </div>    
+
+    <h2>Add a Book</h2>
+    <form ng-submit="createBook()">
+        <label>Title:</label>
+        <input type="text" ng-model="title" required><br>
+        <label>Author:</label>
+        <input type="text" ng-model="author" required><br>
+        <label>Publication Date:</label>
+        <input type="date" ng-model="publicationDate" required><br>
+        <button type="submit">Add Book</button>
+    </form>
+
+</body>
+
+</html>
